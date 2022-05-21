@@ -1,2 +1,3 @@
+Caesar Py
 Versão 1.0
-Cifrar e Decifrar mensagens utilizando a cifra de César
+Funções: Cifra e Decifra mensagens utilizando a cifra de César
