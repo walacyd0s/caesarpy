@@ -15,7 +15,7 @@ class Caesar:
                 continue
             self.sequencia = ord(x) + self.posicao
             if self.sequencia > 122:
-                self.sequencia = (self.sequencia - 122) + (97 - 1)
+                self.sequencia = (self.sequencia - 122) + 96
             x = chr(self.sequencia)
             self.texto_cifrado += x
         print(self.texto_cifrado)
@@ -30,11 +30,11 @@ class Caesar:
                 continue
             self.sequencia = ord(y) - self.posicao
             if self.sequencia < 97:
-                self.sequencia = (97 - self.sequencia) - (122 + 1)
+                self.sequencia = 123 - (97 - self.sequencia)
             y = chr(self.sequencia)
             self.texto_claro += y
         print(self.texto_claro)
 
 
 mensagem = Caesar()
-mensagem.cifrar()
+mensagem.decifrar()
