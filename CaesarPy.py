@@ -8,7 +8,7 @@ class Caesar:
     def cifrar(self):
         self.texto_claro = str(input('Informe a mensagem para criptografar: '))
         self.texto_claro = self.texto_claro.lower()
-        self.posicao = int(input('Informe a posição(deslocamento): '))
+        self.posicao = int(input('Informe a posição(deslocamento) 1-26: '))
         for x in self.texto_claro:
             if x == ' ':
                 self.texto_cifrado += x
@@ -37,4 +37,11 @@ class Caesar:
 
 
 mensagem = Caesar()
-mensagem.decifrar()
+opcao = input('Cifrar(C) ou Decifrar(D) ? ')
+opcao = opcao.lower()
+if opcao == 'c':
+    mensagem.cifrar()
+elif opcao == 'd':
+    mensagem.decifrar()
+else:
+    print('Opção inválida')
